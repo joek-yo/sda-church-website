@@ -6,3 +6,14 @@
 body {
   @apply bg-background text-gray-900;
 }
+
+/* Primary Color */
+.text-primary {
+  color: #004aad;
+}
+.bg-primary {
+  background-color: #004aad;
+}
+.border-primary {
+  border-color: #004aad;
+}

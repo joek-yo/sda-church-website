@@ -25,14 +25,14 @@ export default function BlogSection() {
   }, []);
 
   return (
-    <section className="p-10">
-      <h2 className="text-3xl font-bold text-center">Latest Blog Posts</h2>
+    <section className="p-10 bg-gray-100">
+      <h2 className="text-4xl font-bold text-center text-primary">Latest Blog Posts</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
         {blogs.map((blog, index) => (
-          <div key={index} className="bg-gray-100 p-6 rounded-lg shadow-md">
+          <div key={index} className="bg-white p-6 rounded-lg shadow-md transition duration-300 hover:shadow-lg">
             <h3 className="text-xl font-semibold">{blog.title}</h3>
-            <p className="mt-2">{blog.excerpt}</p>
-            <a href={blog.link} className="text-primary mt-4 block">Read More</a>
+            <p className="mt-2 text-gray-700">{blog.excerpt}</p>
+            <a href={blog.link} className="text-primary mt-4 block hover:underline">Read More</a>
           </div>
         ))}
       </div>
