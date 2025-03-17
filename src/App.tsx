@@ -1,9 +1,21 @@
 // src/App.tsx
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Blog from "./pages/Blog";
+import Contact from "./pages/Contact";
+
 export default function App() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg bg-primary text-white">
-      <h1 className="text-4xl font-bold">Welcome to Kangemi SDA Church</h1>
-      <p className="text-lg mt-4">Bringing the gospel to the world</p>
+    <div>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
     </div>
   );
 }
